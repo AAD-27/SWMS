@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <!--   <link rel="stylesheet" href="./sitqe.css" type="text/css"> type="text/css -> tells browser that when it loads it read it as css -->
+    <!-- add icon link -->
+    <link rel="shortcut icon" type="image/x-icon" href="AD.PNG">
+    <title>Smart Waste Management System</title>
+    <style>
+        .banner {
+            max-width: 15%;            
+            float:right;
+            padding-top: 35px;
+        }
+        .binLevel {
+            display: inline-block;
+            height: 85%;
+            width: 50%;
+        }
+        .binDisp {
+            display: inline-block;
+            width: 95%;
+        }
+        .sub-title {
+            display: inline-flexbox;
+            font-size: 1em;   
+        }
+        aside {
+            width: 30%;           
+            padding-left: 0px;
+            margin-left: 0px;
+            font-size: 10pt;
+            margin-right: 115px;
+            float:right;
+            background-color: rgb(248, 245, 245);
+            padding: 1em;
+        }
+
+        html, 
+        body{
+            height: 100%;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif ;
+            background-color: #999;
+        }
+
+        header{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #83ab9d;
+            font-size: 12px;
+            padding: 6px;
+        }
+
+        nav a:visited,nav a:link {
+            color: #fff;
+            text-decoration: none;  /*   links will not have underline  */
+        }
+
+        nav> ul {
+            display: inline;
+            padding: 0;
+        }
+
+        nav > ul > li {
+            display: inline-block;
+            list-style: none ;
+            margin: 0 5px 0 5px;
+        }
+
+        main {
+            display: block;
+            background-image: url("images/background.png");
+            padding-top: 0.5em;
+            padding-bottom: 3em;  /*   make space for nav bar  */
+            min-height: 90%;
+        }
+
+        article {
+            width: 75%;   /*   use only 75% of the width  */
+            padding-left: 1em;
+        }
+
+        .readings {
+            display: inline-block;
+            padding-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="miniP.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://thingspeak.com/channels/1376533">Graphs</a></li>
+            </ul>
+        </nav>
+    </header>   
+    <main>  <!-- main element tell the search engine that this is primary content -->
+        
+
+        <article>
+            <img src="images/SB.png" class="banner" alt="Swatcha Bharat">
+            <br>
+
+            <h2>Welcome to Smart Waste Management System</h2>
+            <p class="sub-title">
+                Project designed in line with Swatcha Bharat Abhiyaan
+            </p>
+            <div class = "binDisp">
+                <img src="images/1.png"  class="binLevel" alt="Bin Level" id = "bin">
+                <aside style="margin-top: 20px; ">
+                    <img src="images/notifications_off.png" style="width: 30px; height: 30px; display: inline-block; padding-right: 5px;"    alt="notifications_on" id = "noti">
+                    <p style="display: inline-block;"> <u> Notifications: </u>
+                        <br> <br>
+                        1. Wet Waste in DRY Bin : No
+                        <br>
+                        2. SMS for Bin Full Sent : Yes
+                    </p>
+                    <p style=" background-color:rgb(215, 216, 211); padding: 10px;">Click <a href="https://thingspeak.com/channels/1376533">here</a> for live graphs</p> 
+                </aside>                
+            </div>
+        </article>
+        <div class="readings" style="font-size: 10px;">
+            <div class="columns">
+                <div class="distance"> Distance--:</div>                      
+                <div class="humidity"> Humidity--: </div>                        
+            </div>        
+        </div>
+
+    </main>
+</body>
+</html>
+
+<script>
+    let d = 12.7;
+    let h = 67;
+  
+    const readings = document.querySelector(".readings");
+    const dist = readings.querySelector(".distance");
+    const hum = readings.querySelector(".humidity");
+
+    dist.innerText = dist.innerText + d;
+    hum.innerText = hum.innerText + h;
+
+ //   dist.innerText = dist.innerText + "12";
+ //   hum.innerText = hum.innerText + "67";
+
+// Code to change bin level
+ var level='low'
+    if (level ==  'low')
+    {                
+        document.getElementById("bin").src = "images/2.png";
+    }
+
+    if (level ==  'medium')
+    {                
+        document.getElementById("bin").src = "images/3.png";
+    }        
+    
+    if (level ==  'full')
+    {                
+        document.getElementById("bin").src = "images/4.png";
+    }                
+         
+// Code to change the notifcation icon
+var notifcation = 'OFF'
+if (notifcation ==  'ON')
+{                
+    document.getElementById("noti").src = "images/notifications_on.png ";
+}
+
+if (notifcation ==  'OFF')
+{                
+    document.getElementById("noti").src = "images/notifications_off.png ";
+}    
+</script>
+
+
+<!-- aside>img + tab use short cuts and footer>nav>ul>li*3>a + tab -->
