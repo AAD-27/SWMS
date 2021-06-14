@@ -1,7 +1,7 @@
 # SWMS
 Smart Waste Management System using Raspberry Pi 4 –
 
-I have developed this project as part of Sem IV curriculum of BE, EXTC from Vivekanand Institute of Technology, Mumbai
+I have developed this project as part of Sem IV curriculum of BE, EXTC from Vivekanand Education Soicety Institute of Technology, Mumbai
 Project contains a humidity sensor and ultrasonic sensor interfaced to Raspberry Pi
 
 A WebServer was set-up as per the instructions in below link –
