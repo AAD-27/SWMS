@@ -11,3 +11,6 @@ The code uploaded on Github is for the webpage that is rendered to the client re
 
 Click on this link to check my HTML page: - 
 https://aad-27.github.io/SWMS/
+
+Link to my project report :  
+https://drive.google.com/file/d/1jV_2UPavLDj2MXButsz_dQJNzq86dEhU/view?usp=sharing
